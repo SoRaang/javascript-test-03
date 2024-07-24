@@ -109,3 +109,27 @@ console.log(randNum * 10 - 5); // -5 ~ 5 사이의 범위가 된다.
 
 console.log(Math.floor(randNum * 5)); // 반올림하여 정수로 만든다.
 console.log(Math.floor(randNum * 10 - 10)); // 음수도 가능하다.
+
+
+
+let arrayA = [1, 2, 3, 4, 5];
+
+const [alpha, beta, gamma] = arrayA; // 먼저 선언된 배열에서 0, 1, 2번째 요소에 이름을 할당한다.
+
+console.log(alpha, beta, gamma);
+
+
+
+const bookObject = {
+    bookName: '소원을 이루는 책',
+    bookPrice: 20000,
+    publisher: '동네방네'
+}
+
+const { bookName, bookPrice } = bookObject; // 객체에서 여러 속성의 이름을 그대로 추출
+
+console.log(bookName, bookPrice);
+
+const { whatBook = bookName, howMuch = bookPrice } = bookObject; // 추출되는 속성을 다른 이름으로 지정한다.
+
+console.log(whatBook, howMuch);
