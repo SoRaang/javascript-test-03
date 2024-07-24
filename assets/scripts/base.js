@@ -133,3 +133,10 @@ console.log(bookName, bookPrice);
 const { whatBook = bookName, howMuch = bookPrice } = bookObject; // 추출되는 속성을 다른 이름으로 지정한다.
 
 console.log(whatBook, howMuch);
+
+
+
+const newH1 = (text) => `<h1>${ text }</h1>`; // DOM 조작 테스트
+const testDOM = document.getElementById('divDOM');
+
+testDOM.innerHTML += newH1('H1 생성했다!');
