@@ -92,6 +92,20 @@ const dataToJSON = JSON.stringify(jsonData);
 console.log(dataToJSON); // minified된 형태로 표현된다.
 console.log(JSON.stringify(jsonData, null, 4)); // 2번째 매개변수는 특성 속성만 선택해서 추출할 수 있음. 3번째 매개변수는 들여쓰기 칸 수
 
-const unJSON = JSON.parse(dataToJSON); // 두 개의 객체가 포함된 배열, 즉 원래의 형태로 반환된다.
+const unJSON = JSON.parse(dataToJSON); // 두 개의 객체가 포함된 배열, 즉 처음 선언했던 형태로 반환된다.
 
 console.log(unJSON);
+
+
+
+const randNum = Math.random(); // 0 ~ 1 사이의 랜덤한 숫자를 반환한다.
+
+console.log(randNum);
+console.log(randNum * 10);
+console.log(randNum * 50);
+console.log(randNum * 100);
+
+console.log(randNum * 10 - 5); // -5 ~ 5 사이의 범위가 된다.
+
+console.log(Math.floor(randNum * 5)); // 반올림하여 정수로 만든다.
+console.log(Math.floor(randNum * 10 - 10)); // 음수도 가능하다.
