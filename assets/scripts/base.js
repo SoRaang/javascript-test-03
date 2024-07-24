@@ -139,4 +139,16 @@ console.log(whatBook, howMuch);
 const newH1 = (text) => `<h1>${ text }</h1>`; // DOM 조작 테스트
 const testDOM = document.getElementById('divDOM');
 
-testDOM.innerHTML += newH1('H1 생성했다!');
+testDOM.innerHTML += newH1('H1 생성!');
+
+const createdH1 = document.querySelector('h1');
+
+createdH1.id = 'createdH1';
+createdH1.style.padding = '10px';
+createdH1.style.backgroundColor = 'yellowgreen';
+createdH1.style.color = 'darkgreen';
+createdH1.style.fontSize = '30px';
+createdH1.style.fontWeight = '900';
+
+// <head> 내부에서 DOM을 조작하려 하면 제대로 되지 않는다. 아직 DOM이 생성되기 전이기 때문이다.
+// <head> 안에서 script 파일을 불러와도 같은 결과. async를 추가해 주거나 <body>의 마지막에 불러오면 된다.
